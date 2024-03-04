@@ -1,0 +1,26 @@
+公共类水果价格计算器{ 
+公共静态void main（String【】args ）{
+// 假设顾客购买的苹果、草莓和芒果的斤数
+int appleKg = 3；
+int strawberryKg = 2；
+int mango kg = 1；
+// 调用计算价格函数计算总价
+int total price = calculate price（appleKg，strawberryKg，mango kg）；
+System.out.println（“总价为:“+总价+“元");
+} 
+
+公共静态int calculate price（int appleKg，int strawberryKg，int mango kg ）{
+// 判断输入的斤数是否大于等于 0
+if（appleKg《0 | | strawberryKg《0 | | mango kg《0 ）{
+抛出新的IllegalArgumentException（“水果斤数必须大于等于 0");
+ } 
+// 计算苹果的总价
+int applePrice = appleKg * 8；
+// 计算草莓的总价,因为草莓打8折,所以乘以 0.8
+int strawberry price = strawberryKg * 13 * 0.8；
+// 计算芒果的总价
+int mangoPrice = mangoKg * 20
+// 返回苹果、草莓和芒果的总价
+返回applePrice+strawberry price+mango price；
+ }
+ }
