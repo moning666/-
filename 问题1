@@ -1,0 +1,19 @@
+public class FruitPriceCalculator { 
+public static void main(String[] args) { 
+int appleKg = 1; 
+int strawberryKg = 2;
+ int totalPrice = calculatePrice(appleKg, strawberryKg); System.out.println("总价为：" + totalPrice + " 元"); 
+}
+
+ public static int calculatePrice(int appleKg, int strawberryKg){ 
+ // 判断输入的斤数是否大于等于 0
+ if (appleKg < 0 || strawberryKg < 0) { 
+throw new IllegalArgumentException("水果斤数必须大于等于 0"); } 
+// 计算苹果的总价 
+int applePrice = appleKg * 8; 
+// 计算草莓的总价 
+int strawberryPrice = strawberryKg * 13;
+ // 返回苹果和草莓的总价 
+return applePrice + strawberryPrice;
+ } 
+}
